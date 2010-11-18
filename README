@@ -7,3 +7,5 @@ if [ -f ~/bin/dotfiles/bashrc ]; then
     . ~/bin/dotfiles/bashrc
 fi
 
+Link vimrc with
+$ ln -s ~/bin/dotfiles/vimrc ~/.vimrc
