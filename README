@@ -1,3 +1,6 @@
+Add the following files to ~/bin/dotfiles
+
+
 Add the following into your ~/.bashrc
 
 if [ -f ~/bin/dotfiles/bashrc ]; then
