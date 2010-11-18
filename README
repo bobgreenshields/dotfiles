@@ -1,0 +1,6 @@
+Add the following into your ~/.bashrc
+
+if [ -f ~/bin/dotfiles/bashrc ]; then
+    . ~/bin/dotfiles/bashrc
+fi
+
