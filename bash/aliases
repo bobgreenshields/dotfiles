@@ -1,2 +1,18 @@
 
 alias lg='ls -al | grep'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias doc='cd /home/bobg/Documents'
+alias drop='cd /home/bobg/Dropbox'
+alias down='cd /home/bobg/Downloads'
+alias go=gnome-open
+
+
+
+alias scs='sudo chef-solo -c ~/chef/config/solo.rb -j ~/chef/config/dna.json' 
+
+source hillhouse

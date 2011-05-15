@@ -1,0 +1,5 @@
+
+alias pbb='ping -c 5 botanybay'
+
+# attaching to vpn on home network
+alias hillhouse='sudo openvpn --config /etc/openvpn/hill-house.ovpn'
