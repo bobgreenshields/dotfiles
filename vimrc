@@ -1,6 +1,5 @@
 "this must be first, because it changes other options as side effect
 call pathogen#infect()
-syntax on
 set nocompatible
 
 set nowrap        " don't wrap lines
