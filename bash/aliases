@@ -1,8 +1,8 @@
 
-alias lg='ls -al | grep'
+alias lg='ls -l | grep'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
 
