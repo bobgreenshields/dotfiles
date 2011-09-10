@@ -1,11 +1,14 @@
-Add the following files to ~/bin/dotfiles
+Installation:
 
+    git clone git://github.com/bobgreenshields/dotvim.git ~/.vim
 
-Add the following into your ~/.bashrc
+Create symlinks:
 
-if [ -f ~/bin/dotfiles/bashrc ]; then
-    . ~/bin/dotfiles/bashrc
-fi
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
 
-Link vimrc with
-$ ln -s ~/bin/dotfiles/vimrc ~/.vimrc
+Switch to the `~/.vim` directory, and fetch submodules:
+
+    cd ~/.vim
+    git submodule init
+    git submodule update
