@@ -1,5 +1,6 @@
 
 alias lg='ls -l | grep'
+alias ld='ls -l | grep ^d'
 
 # some more ls aliases
 alias ll='ls -lF'
@@ -13,6 +14,6 @@ alias go=gnome-open
 
 
 
-alias scs='sudo chef-solo -c ~/chef/config/solo.rb -j ~/chef/config/dna.json' 
+alias scs='sudo chef-solo -c ~/chef/solo.rb -j ~/chef/node.json' 
 
 source /home/bobg/dotfiles/bash/hillhouse
