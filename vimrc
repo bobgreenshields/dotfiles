@@ -34,8 +34,8 @@ set statusline=%f       "tail of the filename
 set statusline+=%{fugitive#statusline()}
 
 "Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
+"let g:CommandTMaxHeight=10
+"let g:CommandTMatchWindowAtTop=1
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
@@ -48,7 +48,7 @@ inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <leader>b :BufExplorer<cr>
 
 "map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
+"nnoremap <leader>t :CommandT<CR>
 
 
 filetype plugin indent on
