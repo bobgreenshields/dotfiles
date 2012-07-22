@@ -16,4 +16,4 @@ alias go=gvfs-open
 
 alias scs='sudo chef-solo -c ~/chef/solo.rb -j ~/chef/node.json' 
 
-#gvfs /home/bobg/dotfiles/bash/hillhouse
+source /home/bobg/dotfiles/bash/whitecottage

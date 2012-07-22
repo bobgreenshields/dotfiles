@@ -1,0 +1,5 @@
+
+alias pbb='ping -c 5 botanybay'
+
+# attaching to vpn on home network
+alias whitecottage='sudo openvpn --config /etc/openvpn/white-cottage.ovpn'
