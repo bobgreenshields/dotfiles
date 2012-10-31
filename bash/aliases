@@ -1,5 +1,6 @@
 
 alias lg='ls -l | grep'
+alias lag='ls -al | grep'
 alias ld='ls -l | grep ^d'
 
 # some more ls aliases
@@ -10,6 +11,7 @@ alias l='ls -CF'
 alias scn='pushd /home/bobg/scans'
 alias drp='pushd /home/bobg/Dropbox'
 alias dwn='pushd /home/bobg/Downloads'
+alias dsk='pushd /home/bobg/Desktop'
 alias go=gvfs-open
 
 
