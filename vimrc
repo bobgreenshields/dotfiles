@@ -9,6 +9,10 @@ call pathogen#infect()
 "this must be first, because it changes other options as side effect
 set nocompatible
 
+let g:Powerline_symbols = "fancy"
+set laststatus=2
+set t_Co=256
+set encoding=utf-8
 set nowrap        " don't wrap lines
 set tabstop=2     " a tab is four spaces
 set backspace=indent,eol,start
@@ -28,10 +32,10 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
 ""statusline setup
-set statusline=%f       "tail of the filename
+"set statusline=%f       "tail of the filename
 
 "Git
-set statusline+=%{fugitive#statusline()}
+"set statusline+=%{fugitive#statusline()}
 
 "Command-T configuration
 "let g:CommandTMaxHeight=10
