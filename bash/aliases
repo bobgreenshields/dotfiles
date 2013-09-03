@@ -1,4 +1,6 @@
 
+alias test='echo alias rc'
+
 alias lg='ls -l | grep -i'
 alias lag='ls -al | grep -i'
 alias ld='ls -l | grep ^d'

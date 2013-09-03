@@ -1,2 +1,3 @@
-
-alias test="echo dotfiles rc"
+source ~/dotfiles/bash/env
+source ~/dotfiles/bash/config
+source ~/dotfiles/bash/aliases
