@@ -41,6 +41,10 @@ set incsearch     " show search matches as you type
 "let g:CommandTMaxHeight=10
 "let g:CommandTMatchWindowAtTop=1
 
+"write to a file that needs sudo permissions when it has
+"been opened without them
+cmap w!! w !sudo tee % > /dev/null
+
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
