@@ -55,6 +55,10 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
 
+"fugitive mappings
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gp :Git push<cr>
+
 "map to CommandT TextMate style finder
 "nnoremap <leader>t :CommandT<CR>
 
