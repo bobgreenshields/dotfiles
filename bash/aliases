@@ -29,6 +29,11 @@ function fn ()
 	find . -iname "*${1}*"
 }
 
+function fd ()
+{
+	find . -maxdepth 1 -iname "*${1}*"
+}
+
 alias syncmusic='rsync -avp /home/bobg/.ubuntuone/Purchased\ from\ Ubuntu\ One/* /home/bobg/media/music/ubuntuone-mp3/'
 
 
