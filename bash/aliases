@@ -17,7 +17,18 @@ alias dwn='pushd /home/bobg/Downloads'
 alias dsk='pushd /home/bobg/Desktop'
 alias fpl='pushd /home/bobg/inv/FolgateProperties'
 alias prop='pushd /home/bobg/inv/FolgateProperties/PurchasedProperties'
-alias go=gvfs-open
+#alias go=gvfs-open
+
+function go ()
+{
+	gvfs-open ${1} 2> /dev/null
+}
+
+function fn ()
+{
+	find . -iname "*${1}*"
+}
+
 alias syncmusic='rsync -avp /home/bobg/.ubuntuone/Purchased\ from\ Ubuntu\ One/* /home/bobg/media/music/ubuntuone-mp3/'
 
 
