@@ -21,7 +21,7 @@ alias prop='pushd /home/bobg/inv/FolgateProperties/PurchasedProperties'
 
 function go ()
 {
-	gvfs-open ${1} 2> /dev/null
+	gvfs-open "${1}" 2> /dev/null
 }
 
 function fn ()
