@@ -36,6 +36,8 @@ function fd ()
 
 alias syncmusic='rsync -avp /home/bobg/.ubuntuone/Purchased\ from\ Ubuntu\ One/* /home/bobg/media/music/ubuntuone-mp3/'
 
+alias hhvpn='sudo pon hillhouse'
+alias hhrt='sudo route add -net 172.16.77.0/24 dev ppp0'
 
 alias scs='sudo chef-solo -c ~/chef/solo.rb -j ~/chef/node.json' 
 
