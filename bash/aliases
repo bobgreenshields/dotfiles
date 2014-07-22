@@ -34,6 +34,11 @@ function fd ()
 	find . -maxdepth 1 -iname "*${1}*"
 }
 
+function fdgo ()
+{
+	find . -maxdepth 1 -iname "*${1}*" -print0 | xargs -0 -I {} gvfs-open {} 2> /dev/null
+}
+
 alias syncmusic='rsync -avp /home/bobg/.ubuntuone/Purchased\ from\ Ubuntu\ One/* /home/bobg/media/music/ubuntuone-mp3/'
 
 alias hhvpn='sudo pon hillhouse'
