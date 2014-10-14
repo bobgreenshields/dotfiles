@@ -9,6 +9,8 @@ call pathogen#infect()
 "this must be first, because it changes other options as side effect
 set nocompatible
 
+au BufRead,BufNewFile *.md set filetype=markdown
+
 let g:Powerline_symbols = "fancy"
 set laststatus=2
 set t_Co=256
