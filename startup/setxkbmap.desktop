@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=setxkbmap -layout uk -option ctrl:nocaps
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_GB]=Caps to ctrl
+Name=Caps to ctrl
+Comment[en_GB]=Map capslock to control
+Comment=Map capslock to control
