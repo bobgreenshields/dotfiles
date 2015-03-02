@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=setxkbmap -layout uk -option ctrl:nocaps
+Exec=setxkbmap -layout gb -option ctrl:nocaps
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
