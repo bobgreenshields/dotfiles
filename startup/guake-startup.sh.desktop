@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/bobg/dotfiles/guake-startup.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_GB]=guake-startup
+Name=guake-startup
+Comment[en_GB]=Starts up guake with tmux etc.
+Comment=Starts up guake with tmux etc.
