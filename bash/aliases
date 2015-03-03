@@ -7,6 +7,7 @@ alias ld='ls -l | grep ^d'
 
 # some more ls aliases
 alias ll='ls -lF'
+alias lll='ls -lF | less'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -16,7 +17,7 @@ alias dnb='pushd /home/bobg/Dropbox/nicky-bob'
 alias dwn='pushd /home/bobg/Downloads'
 alias dsk='pushd /home/bobg/Desktop'
 alias fpl='pushd /home/bobg/inv/FolgateProperties'
-alias prop='pushd /home/bobg/inv/FolgateProperties/PurchasedProperties'
+alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 #alias go=gvfs-open
 
 function go ()
@@ -26,20 +27,18 @@ function go ()
 
 function fn ()
 {
-	find . -iname "*${1}*"
+	find . -iname "*${1}*" | sort
 }
 
 function fd ()
 {
-	find . -maxdepth 1 -iname "*${1}*"
+	find . -maxdepth 1 -iname "*${1}*" | sort
 }
 
 function fdgo ()
 {
 	find . -maxdepth 1 -iname "*${1}*" -print0 | xargs -0 -I {} gvfs-open {} 2> /dev/null
 }
-
-alias syncmusic='rsync -avp /home/bobg/.ubuntuone/Purchased\ from\ Ubuntu\ One/* /home/bobg/media/music/ubuntuone-mp3/'
 
 alias hhvpn='sudo pon hillhouse'
 alias hhrt='sudo route add -net 172.16.77.0/24 dev ppp0'
