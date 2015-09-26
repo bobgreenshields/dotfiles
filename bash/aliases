@@ -1,14 +1,14 @@
 
 alias test='echo alias rc'
 
-alias lg='ls -l | grep -i'
-alias lag='ls -al | grep -i'
+alias lg='ls -lh | grep -i'
+alias lag='ls -alh | grep -i'
 alias ld='ls -l | grep ^d'
 
 # some more ls aliases
-alias ll='ls -lF'
-alias lll='ls -lF | less'
-alias la='ls -A'
+alias ll='ls -lhF'
+alias lll='ls -lhF | less'
+alias la='ls -lhA'
 alias l='ls -CF'
 
 alias scn='pushd /home/bobg/scans'
