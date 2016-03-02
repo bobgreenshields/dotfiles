@@ -4,9 +4,6 @@
 [submodule "vim/bundle/vim-vroom"]
 	path = vim/bundle/vim-vroom
 	url = https://github.com/skalnik/vim-vroom.git
-[submodule "vim/bundle/powerline"]
-	path = vim/bundle/powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/bufexplorer"]
 	path = vim/bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
