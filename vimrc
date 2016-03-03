@@ -11,7 +11,8 @@ set nocompatible
 
 au BufRead,BufNewFile *.md set filetype=markdown
 
-let g:Powerline_symbols = "fancy"
+"let g:Powerline_symbols = "fancy"
+let g:airline_powerline_fonts = 1
 set laststatus=2
 set t_Co=256
 set encoding=utf-8

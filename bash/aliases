@@ -40,6 +40,12 @@ function fdgo ()
 	find . -maxdepth 1 -iname "*${1}*" -print0 | xargs -0 -I {} gvfs-open {} 2> /dev/null
 }
 
+function fngo ()
+{
+	find . -iname "*${1}*" -print0 | xargs -0 -I {} gvfs-open {} 2> /dev/null
+}
+
+
 alias hhvpn='sudo pon hillhouse'
 alias hhrt='sudo route add -net 172.16.77.0/24 dev ppp0'
 
