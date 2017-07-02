@@ -1,1 +1,5 @@
+PATH="$HOME/bin:$PATH"
+
 export PRINTER=Laser
+
+source  /home/bobg/bin/todo.txt_cli-2.9/todo_completion
