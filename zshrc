@@ -122,6 +122,8 @@ alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 #setup todo.txt
 
 alias t=todo.sh
+alias tda="todo.sh lsp a"
+alias tdb="todo.sh lsp a-b"
 source /home/bobg/bin/todo.txt_cli-2.9/todo_completion complete -F _todo t
 alias vtd="vim /home/bobg/Dropbox/todo/todo.txt"
 export TODOTXT_DEFAULT_ACTION=l
