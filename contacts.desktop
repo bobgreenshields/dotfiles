@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/gvfs-open "https://contacts.google.com/"
+Name=Contacts
+Comment=Launches google contacts in the browser
+Icon=/home/bobg/Pictures/icons/google-contacts.png
+Terminal=false
+Categories=Utility; Application;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/gvfs-open "https://calendar.google.com/calendar"
+Name=Calendar
+Comment=Launches google calendar in the browser
+Icon=/home/bobg/Pictures/icons/google-calendar.png
+Terminal=false
+Categories=Utility; Application;
