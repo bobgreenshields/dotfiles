@@ -119,6 +119,11 @@ alias dsk='pushd /home/bobg/Desktop'
 alias fpl='pushd /home/bobg/inv/FolgateProperties'
 alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 
+#tax aliases
+
+alias tax="pushd ~/fin/tax/Tax1617"
+alias docs="pushd ~/fin/tax/Tax1617/docs"
+
 #setup todo.txt
 
 alias t=todo.sh
