@@ -123,6 +123,8 @@ alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 
 alias tax="pushd ~/fin/tax/Tax1617"
 alias docs="pushd ~/fin/tax/Tax1617/docs"
+alias vtt="vim ~/Dropbox/todo/tax-todo.txt"
+alias vdl="vim ~/fin/tax/Tax1617/docs-list.md"
 
 #setup todo.txt
 
