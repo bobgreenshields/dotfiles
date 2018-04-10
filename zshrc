@@ -133,7 +133,7 @@ alias tda="todo.sh lsp a"
 alias tdb="todo.sh lsp a-b"
 alias td="todo.sh ls @@"
 
-source /home/bobg/bin/todo.txt_cli-2.10/todo_completion complete -F _todo t
+source /home/bobg/bin/todo.txt_cli-2.11.0/todo_completion complete -F _todo t
 alias vtd="vim /home/bobg/Dropbox/todo/todo.txt"
 export TODOTXT_DEFAULT_ACTION=l
 #export TODOTXT_DEFAULT_ACTION="lsp a-b"
