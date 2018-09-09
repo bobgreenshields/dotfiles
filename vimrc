@@ -12,6 +12,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-fugitive'
+Plug 'skalnik/vim-vroom'
 
 
 call plug#end()
