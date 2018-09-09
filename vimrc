@@ -6,7 +6,7 @@ filetype off
 "call pathogen#infect()
 
 "call plug#begin('~/.vim/plugged')
-call plug#begin('~/dev/dotfiles/vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
