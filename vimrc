@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdcommenter'
 Plug 'jlanzarotta/bufexplorer'
 
 
