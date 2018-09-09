@@ -11,7 +11,7 @@ call plug#begin('../plugged')
 Plug 'scrooloose/nerdtree'
 
 
-call plug#end
+call plug#end()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "this must be first, because it changes other options as side effect
