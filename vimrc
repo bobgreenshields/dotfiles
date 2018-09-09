@@ -9,6 +9,8 @@ filetype off
 call plug#begin('~/dev/dotfiles/vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'jlanzarotta/bufexplorer'
 
 
 call plug#end()
