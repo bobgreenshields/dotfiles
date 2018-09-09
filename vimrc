@@ -13,10 +13,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
-Plug 'skalnik/vim-vroom'
-
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
+
+
+nnoremap <C-p> :Files<Cr>
 
 "Use Vim settings, rather then Vi settings (much better!).
 "this must be first, because it changes other options as side effect
