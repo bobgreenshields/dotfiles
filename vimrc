@@ -3,7 +3,15 @@ filetype on
 filetype off
 
 "load pathogen managed plugins
-call pathogen#infect()
+"call pathogen#infect()
+
+"call plug#begin('~/.vim/plugged')
+call plug#begin('../plugged')
+
+Plug 'scrooloose/nerdtree'
+
+
+call plug#end
 
 "Use Vim settings, rather then Vi settings (much better!).
 "this must be first, because it changes other options as side effect
