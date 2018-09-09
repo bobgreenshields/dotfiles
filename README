@@ -5,6 +5,12 @@ Installation:
 or if you are likely to be editing
     git clone git@github.com:bobgreenshields/dotfiles.git
 
+After chef install use
+
+    git remote set-url origin git@github.com:bobgreenshields/dotfiles.git
+
+to switch from https to ssh
+
 Create symlinks:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
