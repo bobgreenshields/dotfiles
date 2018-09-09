@@ -18,8 +18,9 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-
+" fzf shortcuts
 nnoremap <C-p> :Files<Cr>
+nmap ; :Buffers<CR>
 
 "Use Vim settings, rather then Vi settings (much better!).
 "this must be first, because it changes other options as side effect
