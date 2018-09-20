@@ -2,7 +2,8 @@ source ~/dotfiles/bash/env
 source ~/dotfiles/bash/config
 source ~/dotfiles/bash/aliases
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -z "$ZSH_NAME" ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # rbenv
 
