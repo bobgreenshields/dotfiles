@@ -26,6 +26,15 @@ call plug#end()
 nnoremap <C-p> :Files<Cr>
 nmap <Leader>; :Buffers<CR>
 
+" ultisnips
+" make vim recognizing snippets dir
+set runtimepath+=~/.vim/my-snippets/
+" use different snippets dir
+let g:UltiSnipsSnippetsDir='~/.vim/my-snippets/'
+let g:UltiSnipsSnippetDirectories=["my-snippets"]
+" use vertical split to edit snippets
+let g:UltiSnipsEditSplit='vertical'
+
 "vimwiki
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
