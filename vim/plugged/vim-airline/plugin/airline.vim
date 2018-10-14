@@ -32,7 +32,7 @@ function! s:init()
     silent call s:on_colorscheme_changed()
   endif
 
-  silent doautocmd User AirlineAfterInit
+  call airline#util#doautocmd('AirlineAfterInit')
 endfunction
 
 let s:active_winnr = -1
@@ -86,7 +86,7 @@ function! s:airline_toggle()
     endif
     call airline#highlighter#reset_hlcache()
 
-    silent doautocmd User AirlineToggledOff
+    call airline#util#doautocmd('AirlineToggledOff')
   else
     let s:stl = &statusline
     augroup airline
@@ -105,6 +105,8 @@ function! s:airline_toggle()
       if exists("##TerminalOpen")
         autocmd TerminalOpen * call <sid>on_colorscheme_changed()
       endif
+      " Set all statuslines to inactive
+      autocmd FocusLost * call airline#update_statusline_inactive(range(1, winnr('$')))
       " Refresh airline for :syntax off
       autocmd SourcePre */syntax/syntax.vim
             \ call airline#extensions#tabline#buffers#invalidate()
@@ -119,7 +121,7 @@ function! s:airline_toggle()
             \ |   call <sid>on_window_changed()
             \ | endif
 
-      autocmd VimResized * unlet! w:airline_lastmode | :call <sid>airline_refresh()
+      autocmd VimResized,FocusGained * unlet! w:airline_lastmode | :call <sid>airline_refresh()
       autocmd TabEnter * :unlet! w:airline_lastmode | let w:airline_active=1
       autocmd BufWritePost */autoload/airline/themes/*.vim
             \ exec 'source '.split(globpath(&rtp, 'autoload/airline/themes/'.g:airline_theme.'.vim', 1), "\n")[0]
@@ -133,7 +135,7 @@ function! s:airline_toggle()
       call s:on_window_changed()
     endif
 
-    silent doautocmd User AirlineToggledOn
+    call airline#util#doautocmd('AirlineToggledOn')
   endif
 endfunction
 
@@ -155,11 +157,7 @@ function! s:airline_refresh()
     " disabled
     return
   endif
-  let nomodeline=''
-  if v:version > 703 || v:version == 703 && has("patch438")
-    let nomodeline = '<nomodeline>'
-  endif
-  exe printf("silent doautocmd %s User AirlineBeforeRefresh", nomodeline)
+  call airline#util#doautocmd('AirlineBeforeRefresh')
   call airline#highlighter#reset_hlcache()
   call airline#load_theme()
   call airline#update_statusline()

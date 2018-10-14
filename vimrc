@@ -10,14 +10,24 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdcommenter'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'skalnik/vim-vroom'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-titlecase'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
@@ -102,7 +112,7 @@ silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
 "make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
+nnoremap <C-l>l :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
@@ -111,6 +121,12 @@ nnoremap <leader>b :BufExplorer<cr>
 "fugitive mappings
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gp :Git push<cr>
+
+"remap split navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 "map to CommandT TextMate style finder
 "nnoremap <leader>t :CommandT<CR>
