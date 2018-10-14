@@ -34,6 +34,7 @@ let g:UltiSnipsSnippetsDir='~/.vim/my-snippets/'
 let g:UltiSnipsSnippetDirectories=["my-snippets"]
 " use vertical split to edit snippets
 let g:UltiSnipsEditSplit='vertical'
+imap <F3> <C-R>=UltiSnips#ListSnippets()<CR>
 
 "vimwiki
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
