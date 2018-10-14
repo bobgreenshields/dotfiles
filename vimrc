@@ -26,6 +26,9 @@ call plug#end()
 nnoremap <C-p> :Files<Cr>
 nmap <Leader>; :Buffers<CR>
 
+
+set relativenumber
+
 " ultisnips
 " make vim recognizing snippets dir
 set runtimepath+=~/.vim/my-snippets/
