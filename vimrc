@@ -94,6 +94,9 @@ set smarttab      " insert tabs on the start of a line according to
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
+set complete+=kspell
+set spelllang=en_uk
+
 ""statusline setup
 "set statusline=%f       "tail of the filename
 
