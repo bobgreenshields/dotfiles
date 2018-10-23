@@ -95,7 +95,7 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
 set complete+=kspell
-set spelllang=en_uk
+set spelllang=en_gb
 
 ""statusline setup
 "set statusline=%f       "tail of the filename
