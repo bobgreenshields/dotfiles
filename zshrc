@@ -58,6 +58,8 @@ plugins=(git z h)
 # export MANPATH="/usr/local/man:$MANPATH"
   export PATH="/home/bobg/bin:$PATH"
 
+  export EDITOR="vim"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
