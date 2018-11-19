@@ -121,6 +121,32 @@ alias dsk='pushd /home/bobg/Desktop'
 alias fpl='pushd /home/bobg/inv/FolgateProperties'
 alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 
+# joplin aliases
+
+alias jf="joplin ls -l | fzf"
+alias je="joplin edit"
+alias jm="joplin mknote"
+alias js="joplin sync"
+alias jug="joplin use General"
+
+function jme ()
+{
+	joplin mknote "${1}"
+	joplin edit "${1}"
+}
+
+function jfc ()
+{
+	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	joplin cat "$id"
+}
+
+function jfe ()
+{
+	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	joplin edit "$id"
+}
+
 #tax aliases
 
 alias tax="pushd ~/fin/tax/Tax1617"
