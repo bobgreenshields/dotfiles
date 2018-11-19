@@ -123,8 +123,9 @@ alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
 
 # joplin aliases
 
-alias jf="joplin ls -l | fzf"
+alias jc="joplin cat"
 alias je="joplin edit"
+alias jf="joplin ls -l | fzf"
 alias jm="joplin mknote"
 alias js="joplin sync"
 alias jug="joplin use General"
@@ -145,6 +146,11 @@ function jfe ()
 {
 	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
 	joplin edit "$id"
+}
+
+function jgrep ()
+{
+	grep -i -A2 "${1}" ~/Dropbox/Apps/Joplin/* | sed 's/.*\///' | sed 's/\(^[a-f0-9]\{5,5\}\).*[:-]\(.*\)$/\1 \2/'
 }
 
 #tax aliases
