@@ -139,13 +139,19 @@ function jme ()
 function jfc ()
 {
 	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
-	joplin cat "$id"
+	if [ ! -z "$id" ]
+	then
+		joplin cat "$id"
+	fi
 }
 
 function jfe ()
 {
 	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
-	joplin edit "$id"
+	if [ ! -z "$id" ]
+	then
+		joplin edit "$id"
+	fi
 }
 
 function jgrep ()
