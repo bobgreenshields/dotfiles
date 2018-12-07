@@ -138,7 +138,12 @@ function jme ()
 
 function jfc ()
 {
-	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	if [ $# -eq 0 ]
+		then
+			id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	else
+			id=$(joplin ls -l | grep -i "$1" | fzf | cut -d ' ' -f 1)
+	fi
 	if [ ! -z "$id" ]
 	then
 		joplin cat "$id"
@@ -147,7 +152,12 @@ function jfc ()
 
 function jfe ()
 {
-	id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	if [ $# -eq 0 ]
+		then
+			id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	else
+			id=$(joplin ls -l | grep -i "$1" | fzf | cut -d ' ' -f 1)
+	fi
 	if [ ! -z "$id" ]
 	then
 		joplin edit "$id"
