@@ -128,7 +128,8 @@ alias je="joplin edit"
 alias jf="joplin ls -l | fzf"
 alias jm="joplin mknote"
 alias js="joplin sync"
-alias jug="joplin use General"
+alias jugen="joplin use General"
+alias judel="joplin use General"
 
 function jme ()
 {
@@ -161,6 +162,22 @@ function jfe ()
 	if [ ! -z "$id" ]
 	then
 		joplin edit "$id"
+	fi
+}
+
+function jfu ()
+{
+	if [ $# -eq 0 ]
+		then
+			id=$(joplin ls / | fzf )
+	else
+			id=$(joplin ls / | grep -i "$1" | fzf )
+	fi
+	if [ ! -z "$id" ]
+	then
+# trim trailing whitespace	
+		id="${id%"${id##*[![:space:]]}"}"
+		joplin use "$id"
 	fi
 }
 
