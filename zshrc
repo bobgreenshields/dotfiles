@@ -129,7 +129,7 @@ alias jf="joplin ls -l | fzf"
 alias jm="joplin mknote"
 alias js="joplin sync"
 alias jugen="joplin use General"
-alias judel="joplin use General"
+alias judel="joplin use Deliverence"
 
 function jme ()
 {
