@@ -205,6 +205,7 @@ alias vtd="vim /home/bobg/Dropbox/todo/todo.txt"
 export TODOTXT_DEFAULT_ACTION=l
 #export TODOTXT_DEFAULT_ACTION="lsp a-b"
 
+alias scansync="aws s3 sync /home/bobg/scans s3://thegreenshields.com.scans"
 #alias go=gvfs-open
 
 function go ()
