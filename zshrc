@@ -165,6 +165,20 @@ function jfe ()
 	fi
 }
 
+function jfx ()
+{
+	if [ $# -eq 0 ]
+		then
+			id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	else
+			id=$(joplin ls -l | grep -i "$1" | fzf | cut -d ' ' -f 1)
+	fi
+	if [ ! -z "$id" ]
+	then
+		echo "$id" | xsel -ib
+	fi
+}
+
 function jfu ()
 {
 	if [ $# -eq 0 ]
