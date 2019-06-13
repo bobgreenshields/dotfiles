@@ -1,3 +1,7 @@
+" to remove code execution vulnerablility
+set modelines=0
+set nomodeline
+
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
 filetype off
