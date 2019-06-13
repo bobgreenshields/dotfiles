@@ -179,6 +179,20 @@ function jfx ()
 	fi
 }
 
+function jfxx ()
+{
+	if [ $# -eq 0 ]
+		then
+			id=$(joplin ls -l | fzf | cut -d ' ' -f 1)
+	else
+			id=$(joplin ls -l | grep -i "$1" | fzf | cut -d ' ' -f 1)
+	fi
+	if [ ! -z "$id" ]
+	then
+		ls ~/Dropbox/Apps/Joplin | grep "$id" | cut -d '.' -f 1 | xsel -ib
+	fi
+}
+
 function jfu ()
 {
 	if [ $# -eq 0 ]
