@@ -238,7 +238,8 @@ alias scansync="aws s3 sync /home/bobg/scans s3://thegreenshields.com.scans"
 
 function go ()
 {
-	gvfs-open "${1}" 2> /dev/null
+	# gvfs-open "${1}" 2> /dev/null
+	gio open "${1}" 2> /dev/null
 }
 
 function fn ()
