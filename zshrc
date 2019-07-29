@@ -231,6 +231,20 @@ function dfp ()
 	fi
 }
 
+function dfr ()
+{
+	if [ $# -eq 0 ]
+		then
+			id=$(drive list -recursive | fzf )
+	else
+		id=$(drive list -recursive | grep -i "$1" | fzf )
+	fi
+	if [ ! -z "$id" ]
+	then
+		echo "$id"
+	fi
+}
+
 #tax aliases
 
 alias tax="pushd ~/fin/tax/Tax1718"
