@@ -214,6 +214,23 @@ function jgrep ()
 	grep -i -A2 "${1}" ~/Dropbox/Apps/Joplin/* | sed 's/.*\///' | sed 's/\(^[a-f0-9]\{5,5\}\).*[:-]\(.*\)$/\1 \2/'
 }
 
+# gdrive aliases
+
+function dfp ()
+{
+	if [ $# -eq 0 ]
+		then
+			id=$(drive list | fzf | cut -d'/' -f3 )
+	else
+		id=$(drive list | grep -i "$1" | fzf | cut -d'/' -f3 )
+	fi
+	if [ ! -z "$id" ]
+	then
+		# echo "$id"
+		drive pull "$id"
+	fi
+}
+
 #tax aliases
 
 alias tax="pushd ~/fin/tax/Tax1718"
