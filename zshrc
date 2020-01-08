@@ -256,8 +256,9 @@ function dfr ()
 
 #tax aliases
 
-alias tax="pushd ~/fin/tax/Tax1819"
-alias docs="pushd ~/fin/tax/Tax1819/docs"
+alias tax="cd ~/fin/tax/Tax1819"
+alias taxl="cd ~/fin/tax/Tax1718"
+alias docs="cd ~/fin/tax/Tax1819/docs"
 alias vdl="vim ~/fin/tax/Tax1819/docs-list.md"
 
 #setup todo.txt
