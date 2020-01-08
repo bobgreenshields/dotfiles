@@ -165,6 +165,15 @@ function jfe ()
 	fi
 }
 
+function tod ()
+{
+	id=$(joplin ls -l | grep -i "today" | cut -d ' ' -f 1)
+	if [ ! -z "$id" ]
+	then
+		joplin edit "$id"
+	fi
+}
+
 function jfx ()
 {
 	if [ $# -eq 0 ]
@@ -247,10 +256,9 @@ function dfr ()
 
 #tax aliases
 
-alias tax="pushd ~/fin/tax/Tax1718"
-alias docs="pushd ~/fin/tax/Tax1718/docs"
-alias vtt="vim ~/Dropbox/todo/tax-todo.txt"
-alias vdl="vim ~/fin/tax/Tax1718/docs-list.md"
+alias tax="pushd ~/fin/tax/Tax1819"
+alias docs="pushd ~/fin/tax/Tax1819/docs"
+alias vdl="vim ~/fin/tax/Tax1819/docs-list.md"
 
 #setup todo.txt
 
