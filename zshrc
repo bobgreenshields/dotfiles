@@ -99,6 +99,24 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# compdef _files pdfsp
+		# '1:pdf file:_files -g \*.pdf' \
+		# '2::dest dir:_files -/'
+compdef _pdfsp pdfsp
+
+function _pdfsp {
+	_arguments -s : \
+		'-a[archive source file]' \
+		'-c[place output in cloud folder]' \
+		'-h[help]' \
+		'--help[help]' \
+		'-d[destination dir for output]:dest dir:_files -/' \
+		'--destdir=[destination dir for output]:dest dir:_files -/' \
+		'--archive[archive source file]' \
+		'--cloudfile[place output in cloud folder]' \
+		'1:pdf file:_files -g \*.pdf'
+}
+
 #chruby 2.3.3
 #
 # copied from my bash aliases 29 Feb 2016
@@ -120,6 +138,33 @@ alias dwn='pushd /home/bobg/Downloads'
 alias dsk='pushd /home/bobg/Desktop'
 alias fpl='pushd /home/bobg/inv/FolgateProperties'
 alias prop='pushd /home/bobg/inv/FolgateProperties/purchased-properties'
+
+function fcf ()
+{
+	if [ $# -eq 1 ]
+	then
+		file_name=$(find -L -type f -iname \*"${1}"\* | sort -r | fzf | tail -c +2)
+	fi
+
+	if [ $# -eq 2 ]
+	then
+		file_name=$(find -L "${1}" -type f -iname \*"${2}"\* | sort -r | fzf )
+		file_name="/$file_name"
+	fi
+
+	if [ $# -eq 3 ]
+	then
+		file_name=$(find -L "${1}" -type f -iname \*"${2}"\* | grep "${3}" | sort -r | fzf )
+		file_name="/$file_name"
+	fi
+
+	if [ ! -z "$file_name" ]
+	then
+		dir=$(pwd)
+		file_path="$dir$file_name"
+		echo $file_path | xsel -i --clipboard
+	fi
+}
 
 # joplin aliases
 
