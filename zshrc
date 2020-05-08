@@ -50,7 +50,8 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z)
+plugins=(z)
+# plugins=(git z)
 
 # User configuration
 
@@ -163,6 +164,26 @@ function fcf ()
 		dir=$(pwd)
 		file_path="$dir$file_name"
 		echo $file_path | xsel -i --clipboard
+	fi
+}
+
+function gcf ()
+{
+	if [ $# -eq 2 ]
+	then
+		file_name=$(cat "${1}" | grep "${2}" | sort -r | fzf )
+		file_name="$file_name"
+	fi
+
+	if [ $# -eq 3 ]
+	then
+		file_name=$(cat "${1}" | grep "${2}" | grep "${3}" | sort -r | fzf )
+		file_name="$file_name"
+	fi
+
+	if [ ! -z "$file_name" ]
+	then
+		echo $file_name | xsel -i --clipboard
 	fi
 }
 
