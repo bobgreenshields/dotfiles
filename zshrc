@@ -233,6 +233,7 @@ function jfe ()
 
 function tod ()
 {
+	joplin use General
 	id=$(joplin ls -l | grep -i "today" | cut -d ' ' -f 1)
 	if [ ! -z "$id" ]
 	then
